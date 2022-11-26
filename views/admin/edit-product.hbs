@@ -1,0 +1,45 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="md-6">
+                <h2 class="text-center">Edit Product</h2>
+                <form action="/admin/edit-product/{{product._id}}" method="post" enctype="multipart/form-data" id="form" >
+                    <div class="input-control">
+                        <label for="pname">name</label>
+                        <input type="text" id="name" class="form-control" name="Name" placeholder="Name"
+                            value="{{product.Name}}">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="category">Category</label>
+                        <input type="text" id="category" class="form-control" name="Category" placeholder="category"
+                            value="{{product.Category}}">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="price">Price</label>
+                        <input type="text" id="price" class="form-control" name="Price" placeholder="price"
+                            value="{{product.Price}}">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="description">Description</label>
+                        <input type="text" id="description" class="form-control" name="Description"
+                            placeholder="Description" value="{{product.Description}}"><br>
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="image">Image</label>
+                        <img src="/product-images/{{product._id}}.jpg" alt="" width="100px" height="auto"
+                            id="imgView"><br><br>
+                        <div class="error"></div>
+                    </div>
+                    <input type="file" class="form-control" name="Image" onchange="viewImage(event)">
+
+                    <button type="submit" class="btn btn-success mt-3">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+

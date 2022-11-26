@@ -1,0 +1,39 @@
+.error{
+    color: red;
+}
+.rowNum::before{
+    counter-increment: rowNumber;
+    content: counter(rowNumber)".";
+}
+table{
+    counter-reset: rowNumber;
+}
+.cartImage{
+    width: 70px;
+    height: 70px;
+}
+input[type=radio]{
+    width: 20px;
+    height: 20px;
+}
+label.radio-inline{
+    display: flex;
+    align-items: center;
+}
+.checkout{
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 28px;
+}
+.payment{
+    padding-bottom: 16px;
+}
+.margin{
+    margin-top: 150px;
+}
+.button{
+    width: 200px;
+}
+html{
+    scroll-behavior: smooth;
+}

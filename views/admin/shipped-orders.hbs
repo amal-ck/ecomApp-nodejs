@@ -1,0 +1,48 @@
+<h1 class="text-center">order details</h1>
+<section>
+    <div class="container">
+       
+ 
+        <table class="table mt-3 ">
+  <thead>
+    
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">UserID</th>
+      <th scope="col">Address</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Total</th>
+      <th scope="col">Payment</th>
+      <th scope="col">Status</th>
+      
+      
+    </tr>
+  </thead>
+  
+  <tbody>
+    
+    {{#each orders}}
+    
+        
+    <tr>
+      
+      <td>{{this.date}}</td>
+      <td>{{this.userId}}</td>
+      <td> {{this.deliveryDetails.address}} </td>
+      <td> {{this.deliveryDetails.pincode}} </td>
+      <td> {{this.deliveryDetails.mobile}} </td>
+      <td>{{this.totalAmount}}</td>
+      <td>{{this.paymentMethod}}</td>
+      <td>{{this.status}}</td>
+      
+      
+      
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
+    </div>
+</section>
+

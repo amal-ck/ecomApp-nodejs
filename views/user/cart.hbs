@@ -1,0 +1,53 @@
+{{#if product}}
+<section>
+    <div class="container">
+        <table class="table mt-5" border="4">
+            <thead>
+                <tr>
+                    <th scope="col">Items</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {{#each product}}
+                <tr>
+                
+                    <td><img  src="/product-images/{{this.product._id}}.jpg" alt="" class="cartImage" ></td>
+                    <td>{{this.product.Name}}</td>
+                    <td>{{this.product.Price}}</td>
+                    
+                    <td>
+                        
+                        
+                        <button class="cart-item-count mr-3 btn-primary" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',-1) ">-</button>
+                        <span id="{{this.product._id}}">{{this.quantity}}</span>
+                        
+                        <button class="cart-item-count ml-3 btn-primary" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',1)">+</button>
+                    </td>
+                    <td>
+                        <button onclick="deleteCartProduct('{{this._id}}','{{this.product._id}}')" class="btn btn-danger">Remove</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <hr><div class="float-right pr-5">
+        <h5 class="float-right mr-5 mt-4">Total: Rs. <span id="totalValue">{{totalValue}}</span></h5><br>
+        <a href="/place-order" class="btn btn-success mt-3 " style="width: 100%;">Place Order</a>
+        </div>
+    </div>
+</section>
+{{else}}
+<h1 class="text-center">Cart is Empty</h1>
+{{/if}}
+
+<style>
+    .cartImage {
+    width: 52px;
+    height: 70px;
+}
+</style>
