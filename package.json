@@ -17,7 +17,7 @@
     "fileupload": "^0.2.2",
     "hbs": "^4.2.0",
     "http-errors": "~1.6.3",
-    "mongodb": "^4.11.0",
+    "mongodb": "^4.15.0",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.20",
     "razorpay": "^2.8.3"
